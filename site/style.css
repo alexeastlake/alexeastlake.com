@@ -1,0 +1,76 @@
+/*
+  the css loaded.
+  you just can't tell.
+  that's the point.
+*/
+
+body {
+  font-family:
+    Times New Roman,
+    Times,
+    serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ccc;
+  background: #1a1a1a;
+  padding: 2rem 1.5rem;
+}
+
+a {
+  color: #6699ff;
+  transition: color 0.15s ease;
+}
+
+a:visited {
+  color: #b096d4;
+}
+
+a:hover {
+  color: #ff4444;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 1.5rem 0;
+}
+
+ul {
+  padding-left: 40px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+h1 {
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: #888;
+  margin-top: 0;
+}
+
+.pill {
+  display: inline-block;
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: #2a2a2a;
+  color: #888;
+  padding: 2px 8px;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+footer small {
+  color: #666;
+  font-size: 13px;
+}
+
+footer a {
+  color: #666;
+}

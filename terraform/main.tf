@@ -39,7 +39,7 @@ resource "cloudflare_pages_project" "site" {
       production_branch             = "main"
       production_deployments_enabled = true
       pr_comments_enabled           = true
-      preview_deployment_setting    = "none"
+      preview_deployment_setting    = "all"
     }
   }
 
