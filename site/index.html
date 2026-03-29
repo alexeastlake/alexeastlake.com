@@ -73,19 +73,27 @@
         &nbsp;&middot;&nbsp;
       </small>
       <br /><br />
-      <small>
-        You are the
-        <script>
+      <small id="visitor-counter"></small>
+      <script>
+        (function () {
           var n = Math.floor(Math.random() * 99000) + 1000;
           var s = ["th", "st", "nd", "rd"];
           var v = n % 100;
-          document.write(
-            n.toLocaleString() +
-              (s[(v - 20) % 10] || s[v] || s[0]) +
-              " visitor. Just kidding, I made that up."
-          );
-        </script>
-      </small>
+          var ord = s[(v - 20) % 10] || s[v] || s[0];
+          var el = document.getElementById("visitor-counter");
+          el.textContent =
+            "You are the " + n.toLocaleString() + ord + " visitor. Just kidding, I made that up.";
+          fetch("http://numbersapi.com/" + n + "/trivia")
+            .then(function (r) { return r.text(); })
+            .then(function (fact) {
+              el.textContent =
+                "You are the " + n.toLocaleString() + ord +
+                " visitor. Just kidding. That's actually the number of " +
+                fact.charAt(0).toLowerCase() + fact.slice(1);
+            })
+            .catch(function () {});
+        })();
+      </script>
       <br /><br />
       <small>This page is intentionally like this.</small>
     </footer>
