@@ -6,123 +6,27 @@
     <title>Alex Eastlake</title>
     <meta
       name="description"
-      content="Alex Eastlake — Test Automation Engineer/DevOps/Developer"
+      content="Alex Eastlake"
     />
-    <style>
-      /*
-      the css loaded, you just can't tell.
-      that's the point.
-    */
-
-      body {
-        font-family:
-          Times New Roman,
-          Times,
-          serif;
-        font-size: 16px;
-        line-height: 1.5;
-        color: #111;
-        background: #fff;
-        margin: 0 auto;
-        padding: 2rem 1.5rem;
-        max-width: 680px;
-      }
-
-      a {
-        color: #0000ee;
-        transition: color 0.15s ease;
-      }
-
-      a:visited {
-        color: #551a8b;
-      }
-
-      a:hover {
-        color: #ff4444;
-      }
-
-      hr {
-        border: none;
-        border-top: 1px solid #ccc;
-        margin: 1.5rem 0;
-      }
-
-      ul {
-        padding-left: 40px;
-      }
-
-      li {
-        margin-bottom: 4px;
-      }
-
-      h1 {
-        margin-bottom: 0.25rem;
-      }
-
-      .subtitle {
-        color: #555;
-        margin-top: 0;
-      }
-
-      .pill {
-        display: inline-block;
-        font-family: system-ui, sans-serif;
-        font-size: 11px;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        background: #f0f0f0;
-        color: #666;
-        padding: 2px 8px;
-        border-radius: 3px;
-        vertical-align: middle;
-        margin-left: 6px;
-      }
-
-      .load-css-btn {
-        font-family: system-ui, sans-serif;
-        font-size: 12px;
-        padding: 4px 12px;
-        background: #f5f5f5;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        cursor: pointer;
-        color: #888;
-        transition: all 0.2s ease;
-      }
-
-      .load-css-btn:hover {
-        background: #eee;
-        border-color: #bbb;
-        color: #555;
-      }
-
-      footer small {
-        color: #999;
-        font-size: 13px;
-      }
-
-      footer a {
-        color: #999;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <h1>Alex Eastlake</h1>
 
     <p class="subtitle">
-      Test Automation Engineer/DevOps/Developer - New Zealand
+      Test Automation, Release, and DevOps Engineer - New Zealand
     </p>
 
     <hr />
 
     <h2>About</h2>
 
-    <p>about body</p>
+    <p>main body</p>
 
     <p>another body</p>
 
-    <p><b>abc:</b>xyz</p>
+    <p><b>Current Role:</b>Test Automation Engineer @ DataTorque Ltd</p>
 
     <hr />
 
@@ -144,8 +48,8 @@
     <h2>FAQ</h2>
 
     <p>
-      <b>Q: A</b><br />
-      A: B.
+      <b>Q: Is your CSS broken?</b><br />
+      A: No.
     </p>
 
     <p>
@@ -167,6 +71,20 @@
           document.write(new Date().toLocaleDateString("en-NZ"));
         </script>
         &nbsp;&middot;&nbsp;
+      </small>
+      <br /><br />
+      <small>
+        You are the
+        <script>
+          var n = Math.floor(Math.random() * 99000) + 1000;
+          var s = ["th", "st", "nd", "rd"];
+          var v = n % 100;
+          document.write(
+            n.toLocaleString() +
+              (s[(v - 20) % 10] || s[v] || s[0]) +
+              " visitor. Just kidding, I made that up."
+          );
+        </script>
       </small>
       <br /><br />
       <small>This page is intentionally like this.</small>
