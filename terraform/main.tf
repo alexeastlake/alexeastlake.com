@@ -88,6 +88,16 @@ resource "cloudflare_zero_trust_access_application" "pages_dev" {
   account_id = var.cloudflare_account_id
   name       = "Block pages.dev access"
   domain     = "${cloudflare_pages_project.site.name}.pages.dev"
+  destinations = [
+    {
+      type = "public"
+      uri  = "${cloudflare_pages_project.site.name}.pages.dev"
+    },
+    {
+      type = "public"
+      uri  = "*.${cloudflare_pages_project.site.name}.pages.dev"
+    }
+  ]
   type       = "self_hosted"
 
   policies = [
