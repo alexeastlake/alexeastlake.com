@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 ---
 
 <Base title="Alex Eastlake" description="Alex Eastlake">
-  <h1>Alex Eastlake</h1>
+  <h1><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="28" height="28"><rect x="4" y="4" width="56" height="52" rx="8" fill="#333" stroke="#555" stroke-width="2"/><rect x="10" y="6" width="44" height="40" rx="5" fill="#2a2a2a"/><text x="32" y="38" font-family="monospace" font-size="30" fill="#ccc" text-anchor="middle">a</text><rect x="8" y="48" width="48" height="6" rx="3" fill="#222"/></svg> Alex Eastlake</h1>
 
   <p class="subtitle">
     Test Automation, Release, and DevOps Engineer - New Zealand
@@ -13,11 +13,15 @@ import Base from "../layouts/Base.astro";
 
   <h2>About</h2>
 
-  <p>main body</p>
+  <p>
+    I write automated tests to prove it wasn't my fault.
+  </p>
 
-  <p>another body</p>
+  <p>
+    I paint tiny plastic soldiers from a universe where the introduction is 53 separate novels of war crimes. It's very relaxing.
+  </p>
 
-  <p><b>Current Role:</b>Test Automation Engineer @ DataTorque Ltd</p>
+  <p><b>Current Role:</b> Test Automation Engineer @ DataTorque Ltd</p>
 
   <hr />
 
@@ -62,7 +66,10 @@ import Base from "../layouts/Base.astro";
     <small>
       Last updated:
       <script is:inline>
-        document.write(new Date().toLocaleDateString("en-NZ"));
+        var d = new Date();
+        document.write(
+          d.toLocaleDateString("en-NZ") + " " + d.toLocaleTimeString("en-NZ")
+        );
       </script>
       &nbsp;&middot;&nbsp;
     </small>
