@@ -44,7 +44,8 @@ resource "cloudflare_pages_project" "site" {
   }
 
   build_config = {
-    destination_dir = "site"
+    build_command   = "cd site && npm install && npm run build"
+    destination_dir = "site/dist"
   }
 }
 
