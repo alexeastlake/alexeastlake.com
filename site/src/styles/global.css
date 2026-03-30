@@ -47,6 +47,11 @@ h1 {
   margin-bottom: 0.25rem;
 }
 
+.icon {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
 .subtitle {
   color: #888;
   margin-top: 0;
