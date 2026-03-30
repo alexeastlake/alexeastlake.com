@@ -1,3 +1,7 @@
+site/node_modules/
+site/dist/
+site/.astro/
+
 terraform/.terraform/
 terraform/*.tfstate
 terraform/*.tfstate.backup
