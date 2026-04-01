@@ -1,0 +1,27 @@
+---
+import Base from "../layouts/Base.astro";
+import minis from "../data/gallery.json";
+---
+
+<Base title="Gallery — Alex Eastlake" description="Tiny plastic soldiers">
+  <h1>Gallery</h1>
+
+  <p class="subtitle">Tiny plastic soldiers, painted by hand.</p>
+
+  <hr />
+
+  <div class="gallery">
+    {minis.map((mini) => (
+      <figure>
+        <a href={mini.src}>
+          <img src={mini.src} alt={mini.alt} loading="lazy" />
+        </a>
+        <figcaption>{mini.caption}</figcaption>
+      </figure>
+    ))}
+  </div>
+
+  <hr />
+
+  <p><a href="/">← Back</a></p>
+</Base>

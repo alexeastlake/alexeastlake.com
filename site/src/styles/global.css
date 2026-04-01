@@ -71,6 +71,33 @@ h1 {
   margin-left: 6px;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #333;
+}
+
+.gallery img:hover {
+  border-color: #666;
+}
+
+.gallery figcaption {
+  font-size: 13px;
+  color: #888;
+  margin-top: 4px;
+}
+
 footer small {
   color: #666;
   font-size: 13px;
