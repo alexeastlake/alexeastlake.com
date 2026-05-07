@@ -4,7 +4,7 @@ import Base from "../layouts/Base.astro";
 import gallery from "../data/gallery.json";
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "../assets/images/*.jpg",
+  "../assets/images/*.{jpg,jpeg,png,webp,avif}",
   { eager: true }
 );
 
