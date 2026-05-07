@@ -1,6 +1,19 @@
 ---
+import { Image } from "astro:assets";
 import Base from "../layouts/Base.astro";
-import minis from "../data/gallery.json";
+import gallery from "../data/gallery.json";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/images/*.jpg",
+  { eager: true }
+);
+
+function getImage(filename: string) {
+  const key = `../assets/images/${filename}`;
+  const img = images[key];
+  if (!img) throw new Error(`Image not found: ${filename}`);
+  return img.default;
+}
 ---
 
 <Base title="Gallery — Alex Eastlake" description="Tiny plastic soldiers">
@@ -8,18 +21,29 @@ import minis from "../data/gallery.json";
 
   <p class="subtitle">Tiny plastic soldiers, painted by hand.</p>
 
-  <hr />
-
-  <div class="gallery">
-    {minis.map((mini) => (
-      <figure>
-        <a href={mini.src}>
-          <img src={mini.src} alt={mini.alt} loading="lazy" />
-        </a>
-        <figcaption>{mini.caption}</figcaption>
-      </figure>
-    ))}
-  </div>
+  {gallery.map((group) => (
+    <>
+      <hr />
+      <h2>{group.category}</h2>
+      <div class="gallery">
+        {group.items.map((mini) => (
+          <figure>
+            <a href={getImage(mini.src).src}>
+              <Image
+                src={getImage(mini.src)}
+                alt={mini.alt}
+                width={600}
+                format="webp"
+                quality={80}
+                loading="lazy"
+              />
+            </a>
+            <figcaption>{mini.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </>
+  ))}
 
   <hr />
 
