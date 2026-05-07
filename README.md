@@ -24,7 +24,7 @@ Every push deploys automatically via Cloudflare Pages. The `main` branch is the 
 
 Gallery images live in `src/assets/images/` so Astro can optimise them at build time (resized to 600px wide, converted to WebP). The gallery data in `src/data/gallery.json` defines categories and image metadata. To add an image:
 
-1. Drop the `.jpg` into `src/assets/images/`
+1. Drop the image into `src/assets/images/` (JPG, PNG, WebP, or AVIF)
 2. Add an entry to the relevant category in `gallery.json`
 
 Clicking an image in the gallery links to the optimised full-size version.
