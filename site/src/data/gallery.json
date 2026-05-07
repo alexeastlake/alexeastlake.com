@@ -1,0 +1,42 @@
+[
+  {
+    "category": "Tyranids",
+    "items": [
+      {
+        "src": "norn-assimilator-front.jpg",
+        "alt": "Norn Assimilator, front view",
+        "caption": "Norn Assimilator (front)"
+      },
+      {
+        "src": "norn-assimilator-side.jpg",
+        "alt": "Norn Assimilator, side view",
+        "caption": "Norn Assimilator (side)"
+      },
+      {
+        "src": "neurotyrant.jpg",
+        "alt": "Neurotyrant",
+        "caption": "Neurotyrant"
+      },
+      {
+        "src": "maleceptor.jpg",
+        "alt": "Maleceptor",
+        "caption": "Maleceptor"
+      }
+    ]
+  },
+  {
+    "category": "Death Guard",
+    "items": [
+      {
+        "src": "blight-hauler.jpg",
+        "alt": "Myphitic Blight-hauler",
+        "caption": "Myphitic Blight-hauler"
+      },
+      {
+        "src": "blightlord-terminator.jpg",
+        "alt": "Blightlord Terminator",
+        "caption": "Blightlord Terminator"
+      }
+    ]
+  }
+]
